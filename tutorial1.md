@@ -64,5 +64,6 @@ greeter.js (this will become your app.js file)
 greeter.sol
 greeter.json
 
-You can copy 
+You can copy the code from greeter.html and greeter.js into your index.html and app.js files directly, replacing the contact that is there and developing from there. If your greeter.sol contrcat looks like mine not much should need changing.
+
 
