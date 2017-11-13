@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Wishing Well</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+  <script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+  <script src="app.js"></script>
+ 
+
+  
+</head>
+<body>
+  <h1>Wishing Well</h1>
+
+  <p>
+
+  Wallet Address: <input type="text" id="walletAdd" value="Default Address"><br>
+  Password: <input type="password" id="pswd"><br>
+  
+  <input type="button" onClick="unlock()" value="Unlock"><br><br>
+
+  Amount to Deposit : <input type="text" id="amnt" value="0.06"><br>
+  <input type="button" onClick="deposit()" value="Deposit"><br><br>
+  
+
+
+
+  <h3><span id='amountDeposited'></span></h3><br>
+  <h3><span id='totalAmount'></span></h3>
+</body>
+
+
+</html>
