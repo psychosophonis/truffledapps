@@ -6,7 +6,7 @@ This contract front-end demands the writing of transaction to the blockchain and
 
 There is still a long way to go here. The current script doesn't succesfully return any information about the state of the contract. It does however demonstrate the call of contract functions and interaction with accounts. 
 
-I'll update this as I sort out the current obstacles.
+I'll update this as I sort through the many challengaes I'm runnning into
 
 
 - [wishingWell.js](wishingWell.js)
