@@ -72,7 +72,7 @@ I have added four files to this repository with the important files (_greeter.ht
 - [greeter.html](greeter.html) (this will become your index.html file)
 - [greetr.js](greeter.js) (this will become your app.js file)
 - [greeter.sol](greeter.sol)
-- [greeter.json(greeter.json)
+- [greeter.json](greeter.json)
 
 Copy the code from greeter.html and greeter.js into your index.html and app.js files directly, replacing the contact that is there and developing from there. If your greeter.sol contract looks like mine not much should need changing in order for your greeter 'dApp' to work.
 
