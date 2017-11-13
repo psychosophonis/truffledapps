@@ -2,9 +2,26 @@
 <html>
 
 <head>
-  <title>Greeter Test</title>
+  <title>Greeter Front End</title>
+  
+  <!-- This next line links to a css file. Cascading Style Sheets are used to 'style' our html file. 
+  This file has nothing to do with any truffle/dApp dev so you can leave it out if you don't care for style -->
+  
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 
+ <!-- In the next black of code we load all our javascript dependencies.
+
+Web3.js is the librart that does all the work interacting between our JS and the contract. It  allows us access to all our 
+geth/eth commands via javascript (normally just add _web3._ to the beginnning of the eth command. 
+
+jquery is a common library used to simplify, extend, and abbreviate standard javascript functions.
+It has become almost standard in the development of javascript projects.
+
+Finally app.js is our dApps javascript code...
+
+-->
+  
+  
   <script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
   <script src="app.js"></script>
@@ -14,6 +31,9 @@
 </head>
 <body>
   <h1>Greeter Test</h1>
+  
+  <!-- And thats it for the html! Below is an empty span that we identify with the id greeting-text. Using our aap.js javascript
+ we will add our greeter's message inside these tags-->
   <h3><span id='greeting_text'></span></h3>
 </body>
 </html>
