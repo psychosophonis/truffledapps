@@ -9,13 +9,13 @@ This simple example wont do much - it will return the message we wrote to the bl
 
 In the first tutorial we made a new directory for our project, opened that directory via the console/terminal and ran
 
-> >truffle init
+> _>truffle init_
 
 this set up a bunch of folders for our truffle project.
 
 In order to extend our project using Truffle's Dapp (distributed application) development fucntionality and build process we need to initialise the project using:
 
-> >truffle init webpack
+> _>truffle init webpack_
 
 This initialisation process adds all the dependencies we require in order make use of Truffles web framework - allowing us to build a final Javascript file that includes a number of libraries that make it easier to interact with a deployed contract via a browser. It will also provide tools for easily testing and serving our files locally for testing.
 
@@ -25,7 +25,7 @@ If you have deployed a contract already as per the original tutorial you should 
 
 Once you have run;
 
-> _> truffle init webpack_ 
+> _>truffle init webpack_ 
 
 The new directory will include a number of directories that extend the simple , _> truffle init_ , directory structre.
 
