@@ -29,7 +29,12 @@ The contract function is part of the truffle-contract librayr we imported at the
 
 var greeter = contract(greeter_artifacts);
 
-/* The next block of code test to see if we have a web3 provider set up
+/* The next block of code tests to see if we have a web3 provider set up already. 
+If we haven't it sets up a locally hosted instance of web3 (this is apprently not a good thing security wise and you should never serve a production dApp this way.)
+I have also commented out a line that we would drop in instead of this local host version in order to use the infuria web hosted node of ethereum.
+You shoud drop in your own infuria account number here. Ive edited mine so it doesn't work
+)
+
 
 
 */
@@ -37,8 +42,10 @@ var greeter = contract(greeter_artifacts);
  if (typeof web3 !== 'undefined') {
             window.web3 = new Web3(web3.currentProvider);
         } else {
-           // window.web3 = new Web3(new Web3.providers.HttpProvider("https://rinkeby.infura.io/YLZyKiQKOMWSxEZMnRM8"));
-		window.web3 = new Web3(new Web3.providers.HttpProvider("https://rinkeby.infura.io/YLZyKiQKOMWSxEZMnRM8"));
+		
+	window.web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+           // window.web3 = new Web3(new Web3.providers.HttpProvider("https://rinkeby.infura.io/YLZyKiQKOMWSxEZMnR"));  
+		
         }
 
 greeter.setProvider(web3.currentProvider);
@@ -61,3 +68,5 @@ console.log(web3.eth.defaultAccount);
     
 
    });
+
+// M8
