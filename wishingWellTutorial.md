@@ -9,6 +9,6 @@ There is still a long way to go here. The current script doesn't succesfully ret
 I'll update this as I sort out the current obstacles.
 
 
-[wishingWell.js](wishingWell.js)
-[wishingWell.html](wishingWell.html)
+- [wishingWell.js](wishingWell.js)
+- [wishingWell.html](wishingWell.html)
 
