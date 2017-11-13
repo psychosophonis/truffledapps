@@ -69,10 +69,10 @@ and Truffle will package all the dependencies with our dApp code in the index.ht
 
 I have added four files to this repository with the important files (_greeter.html_ and _greeter.js_ heavily commented so that you can follow along with the code in situ. Loading the code from these files into the _index.html_ and _app.js_ files taht reside in your projects _app_  directory. Reading through them is a good way to process and explore the tutorial/example.
 
-greeter.html (this will become your index.html file)
-greeter.js (this will become your app.js file)
-greeter.sol
-greeter.json
+- (greeter.html) (this will become your index.html file)
+- (greeter.js) (this will become your app.js file)
+- (greeter.sol)
+- (../greeter.json)
 
 Copy the code from greeter.html and greeter.js into your index.html and app.js files directly, replacing the contact that is there and developing from there. If your greeter.sol contract looks like mine not much should need changing in order for your greeter 'dApp' to work.
 
