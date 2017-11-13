@@ -9,13 +9,13 @@ This simple example wont do much - it will return the message we wrote to the bl
 
 In the first tutorial we made a new directory for our project, opened that directory via the console/terminal and ran
 
-> truffle init
+> >truffle init
 
 this set up a bunch of folders for our truffle project.
 
 In order to extend our project using Truffle's Dapp (distributed application) development fucntionality and build process we need to initialise the project using:
 
->truffle init webpack
+> >truffle init webpack
 
 This initialisation process adds all the dependencies we require in order make use of Truffles web framework - allowing us to build a final Javascript file that includes a number of libraries that make it easier to interact with a deployed contract via a browser. It will also provide tools for easily testing and serving our files locally for testing.
 
@@ -25,7 +25,7 @@ If you have deployed a contract already as per the original tutorial you should 
 
 Once you have run;
 
-_>truffle init webpack_ 
+> _> truffle init webpack_ 
 
 The new directory will include a number of directories that extend the simple , _> truffle init_ , directory structre.
 
@@ -37,7 +37,7 @@ Inside the _javascripts_ folder you will find a file called _apps.js_
 
 In the truffle environment these are the files (_index.html_ and _app.js_) that we will develop and test with before we 'build' a project that bakes in all the required dependencies. When we have finshed our development we will run....
 
-> npm run build 
+> _>npm run build_ 
 
 ... and Truffle takes these files and uses them to build a web deployable version of your dApp that includes all the necessary javascript dependecies - in files that are also named _index.html_ and _app.js_ but which reside in the _build_ directory.
 
@@ -51,7 +51,7 @@ The process of developing a frontend with Truffle with which to interact with ou
 
 We then run the command;
 
-_> npm run dev_
+> _> npm run dev_
 
 From the directory and truffle will build and serve a test project at a local address (localhost://8080 or soemthing similar that it will report in the console). You can then open your project at this address. 
 
@@ -61,7 +61,7 @@ If your app.js files compiles the npm run dev process running in the console wil
 
 When we are happy that our tested dApp works using the _>npm run dev_ testing environment we can run;
 
-_> npm run build_
+> _> npm run build_
 
 and Truffle will package all the dependencies with our dApp code in the index.html and app.js file saved/updated in the build directory of our Truffle project. These files can be copied out and served from any web server that has access to an ethereum node. 
 
