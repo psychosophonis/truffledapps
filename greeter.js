@@ -1,4 +1,4 @@
-// Tutorial files for adding a front end to display the greeter message.
+// Tutorial files for adding the simplest possible hello world front end to a dapp thats displays the message of the greeter contract.
 
 /* First lets load all of our dependencies. The first import is a style sheet 
  - this has nothing to do with contract interactions and can be left out 
@@ -34,9 +34,6 @@ If we haven't it sets up a locally hosted instance of web3 (this is apprently no
 I have also commented out a line that we would drop in instead of this local host version in order to use the infuria web hosted node of ethereum.
 You shoud drop in your own infuria account number here. Ive edited mine so it doesn't work
 )
-
-
-
 */
 
  if (typeof web3 !== 'undefined') {
@@ -48,22 +45,45 @@ You shoud drop in your own infuria account number here. Ive edited mine so it do
 		
         }
 
+/* set the current web3 provider to use our contract instance greeter (we instantiated this above in line 30) */
+
 greeter.setProvider(web3.currentProvider);
+
+/* In this example we don't need to use our eth/geth accounts because a 'call' to return a value from the blockchain 
+doesn't cost us any gas - That said we can use these lines to ensure web3 is working and speaking to our local ethereum node. 
+
+In order to do this in the background we simply write a returned value (the address of the default geth account) to the javascript console log.
+If everything is working you should be able to see this value returned in the javascript console that is part of the development tools 
+inlcuded with your web browser 
+*/
 
 web3.eth.defaultAccount = web3.eth.accounts[0];
 console.log(web3.eth.defaultAccount);
 
+/* This is the importnt part. 
+/* first we check to see if our javascript contrcat instance corresponds to an actual deployed contract. */
+
  greeter.deployed().then(function(contractInstance) {
+	 
+	 /* If the contract is deployed then we can call the function that returns our greeting - using a call function allows us to
+	 poll the blockchain without writing a transaction and without (therefore) spending gas */
+	 
+	/* Because this function simply returns a single value (a text string) we need only assign that value to the variable 'result' which we cam then use 
+	elsewhere in our functions */ 
+	 
        return contractInstance.greet.call();
    }).then(function(result){
 
-	
+	/*  Here i log the returned value assigned to the variable 'result' to the console as a way of checking the javascript output */ 
+	/* I can  (and do) use these console.log() commands to test what is happening at particular places in my script.*/
+	 
     	console.log(result); 
+	
+	/* The final lines of our code replaces the vlaues between our html <span id = greeting_text></span> tags in our html with the
+	value stored in our result variable. */
+	
     	var div = document.getElementById("greeting_text");
     	div.innerHTML = result;
-	
-
-     //  $("#" + greeting_text).html(result.toString());
 
     
 
