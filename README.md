@@ -1,10 +1,9 @@
 ## Greeter with a Javascript/HTML front end.
 
-In this example/tutorial I will extend the 'greeter' example explored at the Polygon Door website (http://polygondoor.com.au/hello-world-on-ethereum-blockchain/) by adding a web (html/javascript) front end that will return the message we wrote to the blockchain via the greeter.sol contract. I will assume you have followed that tutorial.
+In this example/tutorial I will extend the 'greeter' example explored at the Polygon Door website (http://polygondoor.com.au/hello-world-on-ethereum-blockchain/).
 
-In this tutorial we will build the simplest possible interaction between our browser and blockchain. We will do this by baking all the steps require to interact with the contract into a javascript file and use a html file to display the result. 
-
-All this example will do is print a message to the browser window using a call to a deployed contract.
+In this tutorial we will build the simplest possible interaction between our browser and blockchain. We will do this by baking all the steps requiree to interact with the contract into a javascript file and use a html file to display the result. 
+This simple example wont do much - it will return the message we wrote to the blockchain via the greeter.sol contract as a proff of concept/hello world. 
 
 ### Initalising Truffle and Webpack
 
@@ -18,52 +17,63 @@ In order to extend our project using Truffle's Dapp (distributed application) de
 
 >truffle init webpack
 
-This adds all the dependencies we require in order make use of Truffles web framework - allowing us to build a final Javascript file that includes a number of libraries that make it easier to interact with a deployed contract via a browser. It will also provide tools for easily testing and serving our files locally for testing.
+This initialisation process adds all the dependencies we require in order make use of Truffles web framework - allowing us to build a final Javascript file that includes a number of libraries that make it easier to interact with a deployed contract via a browser. It will also provide tools for easily testing and serving our files locally for testing.
 
-If you have a deployed contract already you should intialise a new project (truffle init webpack) in a new directory and copy your contract, migration files, and build > contract > \*.jsonfiles into the new directory structure. 
+If you have deployed a contract already as per the original tutorial you should intialise a new project (truffle init webpack) in a new directory (mkdir) and copy your contract, migration files, and build > contract > \*.jsonfiles into the new directory structure. 
 
 ### The Truffle dApp directory structure.
 
-Once you have run >truffle init webpack The new directory will include a number of directories that extend the simple 
-_> truffle init_ directory structre.
+Once you have run;
 
+_>truffle init webpack_ 
 
-These include an 'app' directory.
+The new directory will include a number of directories that extend the simple , _> truffle init_ , directory structre.
 
-Open the _'app'_ directory and you will find an _index.html_ file and a _javascripts_ folder.
-In the _javascripts_ folder you will find a file called _'apps.js'_
+These include an _app_ directory.
 
-In the truffle environment these are the files (index.html and app.js) that we will develop and test with before we 'build' a project that bakes in all the required dependencies. When we....
+Open the _app_ directory and you will find an _index.html_ file and a _javascripts_ folder.
 
-> Truffle build 
+Inside the _javascripts_ folder you will find a file called _apps.js_
 
-...the project Truffle takes these files and uses them to build a deployable version of your dApp that includes all the necessary javascript dependecies - in files that are also named index.html and app.js but which reside in the 'build' directory.
+In the truffle environment these are the files (_index.html_ and _app.js_) that we will develop and test with before we 'build' a project that bakes in all the required dependencies. When we have finshed our development we will run....
 
-Another important element in our directory structure are the \*.json files in our _build/contracts directory
+> npm run build 
 
-These files include all the information that we struggled to wrangle in our first 'greeter' contract tutorial. Truffle records your ABI and your contract Address in these files and makes it easier for us to import them - this avoids the whitespace and parseing steps of our first tutorial. 
+... and Truffle takes these files and uses them to build a web deployable version of your dApp that includes all the necessary javascript dependecies - in files that are also named _index.html_ and _app.js_ but which reside in the _build_ directory.
+
+Another important element in our directory structure are the _\*.json_ files in our _build/contracts_ directory
+
+These files include all the information that we struggled to wrangle in our first _greeter.sol_ contract tutorial. Truffle records your ABI and your contract Address in these files and makes it easier for us to import them - this avoids the whitespace and json parsing steps of our first tutorial. 
 
 ### The process of developing a javascript/html front end.
 
-The process of developing a frontend with which to interact with our contract involves editing the _index.html_ and _app.js_ files in the apps directory. 
+The process of developing a frontend with Truffle with which to interact with our Ethereum contracts involves editing the _index.html_ and _app.js_ files in the apps directory. 
 
-We can then run the command;
+We then run the command;
 
-_> npm run dev_ 
+_> npm run dev_
 
 From the directory and truffle will build and serve a test project at a local address (localhost://8080 or soemthing similar that it will report in the console). You can then open your project at this address. 
 
-If your app.js files compiles the npm run dev process running in the console will let you know - if not it will give you errors that can direct you to the problem. The other place to look for errors and test for problems is using the javascript colnsole in you browser's development tools. 
+If your app.js files compiles the npm run dev process running in the console will let you know - if not it will give you errors that can direct you to the problem. The other place to look for errors and test for problems is using the javascript colnsole in you browser's development tools.
+
+### Building and deploying.
+
+When we are happy that our tested dApp works using the _>npm run dev_ testing environment we can run;
+
+_> npm run build_
+
+and Truffle will package all the dependencies with our dApp code in the index.html and app.js file saved/updated in the build directory of our Truffle project. These files can be copied out and served from any web server that has access to an ethereum node. 
 
 ## Tutorial Files.
 
-I have added four files to this repository with the important files heavily commented. Loading these files into your directory and reading through them is a good way to process with the tutorial/example.
+I have added four files to this repository with the important files (_greeter.html_ and _greeter.js_ heavily commented so that you can follow along with the code in situ. Loading the code from these files into the _index.html_ and _app.js_ files taht reside in your projects _app_  directory. Reading through them is a good way to process and explore the tutorial/example.
 
 greeter.html (this will become your index.html file)
 greeter.js (this will become your app.js file)
 greeter.sol
 greeter.json
 
-You can copy the code from greeter.html and greeter.js into your index.html and app.js files directly, replacing the contact that is there and developing from there. If your greeter.sol contrcat looks like mine not much should need changing.
+Copy the code from greeter.html and greeter.js into your index.html and app.js files directly, replacing the contact that is there and developing from there. If your greeter.sol contract looks like mine not much should need changing in order for your greeter 'dApp' to work.
 
 
