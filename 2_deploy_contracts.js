@@ -1,6 +1,6 @@
-var BouncingWishingWell = artifacts.require("./BouncingWishingWell.sol");
+var greeter = artifacts.require("./greeter.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(BouncingWishingWell);
+  deployer.deploy(greeter,"this is you chance to say something on the blockchain");
 
 };
