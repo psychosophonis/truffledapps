@@ -10,32 +10,36 @@ The tutorial detail below the numbered steps adds more explanation but leaves ou
 The numbered steps try to repeat all necessary steps to migrate and interact with the greeter project.
 If I have left anyhting out let me know.
 
-1. Make a new directory for your truffle project - call it greeter.
-2. Navigate to that folder in a command line editor.
-3. With truffle installed type > truffle init webpack. (you may need to install nodejs and truffle before proceeding)
-4. This should create a truffle project structure with many new directories and files created inside you greeter directory.
-5. Open this link [greeter.js](greeter.js) and copy the RAW code (click RAW, then select all, then copy).
-6. Paste the contents of this file into the file app.js that you have just created and which resides in the app>javascripts> folder of your new truffle project directory.
-7. Open this link [greeter.html](greeter.html) and copy the RAW code (click RAW, then select all, then copy).
-8. Paste the contents of this file into the file index.html that you have just created and which resides in the app> folder of your new truffle project directory.
-9. Run the command 'truffle console' 
-10. At the new console prompt type web3.eth.accounts[0] and copy the wallet address that the command returns. If no number is returned create a new account by typing web3.personal.newAccount('verystrongpassword') (replacing the password with your own)
-11. Open this link [truffle.js](truffle.js) and paste the contents into the truffle.js file that is in the root of your truffle project. Change the 'account from' address to the number of the address you just created and save the file.
-12. Open this link [greeter.sol](greeter.sol) and copy and paste the contents into a new file. Save the file as greeter.sol to the contracts folder of your truffle project.
-13. Open this link [2_deploy_contracts.js](2_deploy_contracts.js) and paste the contents into the file 2_deploy_contracts.js that resides in the >migrations folder of your truffle project.
-14. Change the message that you will write to the contract to something of your own. Save the file.
-15. In the truffle console (type the command > truffle console) unlock your default account by typing;
+1. Run and sync a local geth node on the rinkeby network;
+
+geth --networkid=4 --datadir=$HOME/.rinkeby --cache=1024 --bootnodes=enode://a24ac7c5484ef4ed0c5eb2d36620ba4e4aa13b8c84684e1b4aab0cebea2ae45cb4d375b77eab56516d34bfbd3c1a833fc51296ff084b770b94fb9028c4d25ccf@52.169.42.101:30303 --rpc --rpcapi db,eth,net,web3,personal --rpcport 8545 --rpcaddr 127.0.0.1 --rpccorsdomain "*"
+
+2. Make a new directory for your truffle project - call it greeter.
+3. Navigate to that folder in a command line editor.
+4. With truffle installed type > truffle init webpack. (you may need to install nodejs and truffle before proceeding) (see more detail below)
+5. This should create a truffle project structure with many new directories and files created inside you greeter directory.
+6. Open this link [greeter.js](greeter.js) and copy the RAW code (click RAW, then select all, then copy).
+7. Paste the contents of this file into the file app.js that you have just created and which resides in the app>javascripts> folder of your new truffle project directory.
+8. Open this link [greeter.html](greeter.html) and copy the RAW code (click RAW, then select all, then copy).
+9. Paste the contents of this file into the file index.html that you have just created and which resides in the app> folder of your new truffle project directory.
+10. Run the command 'truffle console' 
+11. At the new console prompt type web3.eth.accounts[0] and copy the wallet address that the command returns. If no number is returned create a new account by typing web3.personal.newAccount('verystrongpassword') (replacing the password with your own)
+12. Open this link [truffle.js](truffle.js) and paste the contents into the truffle.js file that is in the root of your truffle project. Change the 'account from' address to the number of the address you just created and save the file.
+13. Open this link [greeter.sol](greeter.sol) and copy and paste the contents into a new file. Save the file as greeter.sol to the contracts folder of your truffle project.
+14. Open this link [2_deploy_contracts.js](2_deploy_contracts.js) and paste the contents into the file 2_deploy_contracts.js that resides in the >migrations folder of your truffle project.
+15. Change the message that you will write to the contract to something of your own. Save the file.
+16. In the truffle console (type the command > truffle console) unlock your default account by typing;
 personal.unlockAccount("0x10afa70143dc4f099f729815683727b0f926745", "veryStrongPassword") replacing the account address with you own default address that you copied earlier and your own password.
-16. The truffle console should read 'true' if the account is unlocked succesfully.
-17. Go back to the root of your truffle project within the command line editor. Type > truffle compile.
-18. If you recieve no error try > truffle migrate  (you may need to use truffle migrate --reset of youve tried before)
-19. The command line shoud tell you it is 'Saving successful migration to network...' if all has gone well.
-20. Run the command > npm run dev , which will start a local web server on your computer.
-21. If your javascript compiles ok and has no errors the console will tell you that the file has compiled succesfully and will give ypu the address of a localhost server.
-21. Look for a URL that says localhost:/8080 (or seomthing like it) - copy and paste it into a browser to run your dApp.
-22. The browser should return the message you wrote to the blockchain.
-24. Open the app.js file and the index.html file. 
-25. You may now edit these freely.... try adding some more information from the blockchain by exploring these commands: https://github.com/ethereum/wiki/wiki/JavaScript-API
+17. The truffle console should read 'true' if the account is unlocked succesfully.
+18. Go back to the root of your truffle project within the command line editor. Type > truffle compile.
+19. If you recieve no error try > truffle migrate  (you may need to use truffle migrate --reset of youve tried before)
+20. The command line shoud tell you it is 'Saving successful migration to network...' if all has gone well.
+21. Run the command > npm run dev , which will start a local web server on your computer.
+22. If your javascript compiles ok and has no errors the console will tell you that the file has compiled succesfully and will give ypu the address of a localhost server.
+23. Look for a URL that says localhost:/8080 (or seomthing like it) - copy and paste it into a browser to run your dApp.
+24. The browser should return the message you wrote to the blockchain.
+25. Open the app.js file and the index.html file. 
+26. You may now edit these freely.... try adding some more information from the blockchain by exploring these commands: https://github.com/ethereum/wiki/wiki/JavaScript-API
 
 
 ### Directory of files for each project:
