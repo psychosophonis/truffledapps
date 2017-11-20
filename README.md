@@ -1,3 +1,5 @@
+## Deploying and Interacting with a none-too smart contract.
+
 This repo includes files for building truffle example projects/tutorials 
 - much of which we are still discovering and working through.
 The first tutorial is an extension of our 'Greeter' hello world examples linked on our web page.
