@@ -1,3 +1,14 @@
+/* 
+
+this document is used to interact with Etienne Deleflie's BouncingWishingWell.sol contract.
+There is much not working here I am still to fix - most notably using events to return values more economically
+I have made extensive comment throughout to the point it should be straightforward to follow.
+
+*/
+
+
+
+
 import "../stylesheets/app.css";
 
 // import dependencies
