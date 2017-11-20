@@ -2,7 +2,18 @@ This repo includes files fro building truffle example projects/tutorials.
 The first tutorial is an extension of our 'Greeter' hello world examples linked on our web page.
 The second set of files is for a more complex project puts a web frontend on a gambling contract BouncingWishingWell.sol.
 
-[wishingWell.md] 
+### Directory of files for each project:
+
+- [wishingWellTutorial.md](wishingWellTutorial.md)
+- [wishingWell.sol](wishingWell.sol)
+- [wishingWell.js](wishingWell.js)
+- [wishingWell.html](wishingWell.html)
+- [wishingWell.json](wishingWell.json)
+
+- [greeter.html](greeter.html) (this will become your index.html file)
+- [greetr.js](greeter.js) (this will become your app.js file)
+- [greeter.sol](greeter.sol)
+- [greeter.json](greeter.json)
 
 
 
