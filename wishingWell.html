@@ -17,19 +17,20 @@
 
   <p>
 
-  Wallet Address: <input type="text" id="walletAdd" value="Default Address"><br>
-  Password: <input type="password" id="pswd"><br>
+  Wallet Address: <input type="text" id="walletAdd" value="Default Address">
+  Password: <input type="password" id="pswd">
+
+  Account Balance: <p><span id="balance"></span> eth</p>
   
-  <input type="button" onClick="unlock()" value="Unlock"><br><br>
+  <input type="button" onClick="unlock()" value="Unlock">
 
-  Amount to Deposit : <input type="text" id="amnt" value="0.06"><br>
-  <input type="button" onClick="deposit()" value="Deposit"><br><br>
+  Amount to Deposit : <input type="text" id="amnt" value="0.06">
+  <input type="button" onClick="deposit()" value="Deposit">
+  <p><span id='amountDeposited'></span></p>
+  <p>Pending Block : <span id='latestBlock'></span></p>
+  <p>Latest Block Mined at <span id='latestBlockTimestamp'></span></p>
+
   
-
-
-
-  <h3><span id='amountDeposited'></span></h3><br>
-  <h3><span id='totalAmount'></span></h3>
 </body>
 
 
