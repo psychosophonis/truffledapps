@@ -5,7 +5,7 @@ This repo includes files for building truffle example projects/tutorials
 The first tutorial is an extension of our 'Greeter' hello world examples linked on our web page.
 The second set of files is for a more complex project puts a web frontend on a gambling contract BouncingWishingWell.sol.
 
-The tutorial detail below the numbered steps adds more explanation but leaves out most of the steps already performed in our first tutorial. You must have changed or copied across index.html, app.js, truffle.js, greeter.sol, 2_deploy_contracts.js, unlocked your account, truffle migrate you contract to the rinkeby network for any of this to work.
+The tutorial detail below the numbered steps adds more explanation but leaves out many steps already performed in our first tutorial.... if you skip a step you will not succeed. You must have changed or copied across index.html, app.js, truffle.js, greeter.sol, 2_deploy_contracts.js, unlocked your account, and truffle migrate your contract to the rinkeby network for any of this to work.
 
 The numbered steps try to repeat all necessary steps to migrate and interact with the greeter project.
 If I have left anyhting out let me know.
