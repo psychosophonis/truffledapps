@@ -1,3 +1,11 @@
+This repo includes files fro building truffle example projects/tutorials.
+The first tutorial is an extension of our 'Greeter' hello world examples linked on our web page.
+The second set of files is for a more complex project puts a web frontend on a gambling contract BouncingWishingWell.sol.
+
+[wishingWell.md] 
+
+
+
 ## Greeter with a Javascript/HTML front end.
 
 In this example/tutorial I will extend the 'greeter' example explored at the Polygon Door website (http://polygondoor.com.au/hello-world-on-ethereum-blockchain/).
