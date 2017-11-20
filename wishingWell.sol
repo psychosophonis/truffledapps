@@ -34,7 +34,10 @@ contract BouncingWishingWell {
 
     // Publicise that we are up to a new round!
     // The amount displayed shows how much Ether was won in the last round
-    event LogRoundOver(uint amount);
+    event LogRoundOver(
+        uint256 amntdep,
+        uint256 depositorCount,
+        address depositorLatest);
 
     function deposit() if_right_amount() payable public returns (uint256){
 
@@ -86,7 +89,8 @@ contract BouncingWishingWell {
             depositors[ 3 ].transfer(_amount/5);
             depositors[ 4 ].transfer(_amount/5);
 
-            LogRoundOver(15); // logic of total won to be worked out
+        // LogRoundOver(666); // logic of total won to be worked out
+        //  LogStuff();
 
         }
 
@@ -95,6 +99,19 @@ contract BouncingWishingWell {
 
         return amountDeposited;
     }
+    
+    function LogStuff() public {
+        
+        LogRoundOver(amountDeposited,depositorCount,depositors[depositorCount-1]);
+        
+    }
+    
+
+ function amountDep() constant returns (uint256) {
+        return amountDeposited;
+    }
+
+    
 
     // This modifier allows us to keep at least one conditional out of the transaction logic
     modifier if_right_amount() {
