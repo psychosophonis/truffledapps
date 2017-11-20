@@ -4,11 +4,15 @@ The second set of files is for a more complex project puts a web frontend on a g
 
 ### Directory of files for each project:
 
+#### Wishing Well;
+
 - [wishingWellTutorial.md](wishingWellTutorial.md)
 - [wishingWell.sol](wishingWell.sol)
 - [wishingWell.js](wishingWell.js)
 - [wishingWell.html](wishingWell.html)
 - [wishingWell.json](wishingWell.json)
+
+#### Greeter;
 
 - [greeter.html](greeter.html) (this will become your index.html file)
 - [greetr.js](greeter.js) (this will become your app.js file)
