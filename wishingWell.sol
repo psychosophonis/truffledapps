@@ -11,6 +11,14 @@ pragma solidity ^0.4.0;
  * each depositor will pay different amounts of gas.
  *
  */
+ 
+ /* 
+ 
+ This contract was edited to try and make the event LogRoundOver() return values 
+ and to add a call function that would return the amount deposited. There are prabbaly better ways.
+ 
+ */
+ 
 
 contract BouncingWishingWell {
 
