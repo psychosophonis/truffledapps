@@ -3,6 +3,11 @@ This repo includes files for building truffle example projects/tutorials
 The first tutorial is an extension of our 'Greeter' hello world examples linked on our web page.
 The second set of files is for a more complex project puts a web frontend on a gambling contract BouncingWishingWell.sol.
 
+The tutorial detail below the numbered steps adds more explanation but leaves out most of the steps already performed in our first tutorial. You must have changed or copied across index.html, app.js, truffle.js, greeter.sol, 2_deploy_contracts.js, unlocked your account, truffle migrate you contract to the rinkeby network for any of this to work.
+
+The numbered steps try to repeat all necessary steps to migrate and interact with the greeter project.
+If I have left anyhting out let me know.
+
 1. Make a new directory for your truffle project - call it greeter.
 2. Navigate to that folder in a command line editor.
 3. With truffle installed type > truffle init webpack. (you may need to install nodejs and truffle before proceeding)
@@ -52,20 +57,26 @@ personal.unlockAccount("0x10afa70143dc4f099f729815683727b0f926745", "veryStrongP
 
 In this example/tutorial I will extend the 'greeter' example explored at the Polygon Door website (http://polygondoor.com.au/hello-world-on-ethereum-blockchain/).
 
-In this tutorial we will build the simplest possible interaction between our browser and blockchain. We will do this by baking all the steps requiree to interact with the contract into a javascript file and use a html file to display the result. 
+In this tutorial we will build the simplest possible interaction between our browser and blockchain. We will do this by baking all the steps required to interact with the contract into a javascript file and use a html file to display the result. 
 This simple example wont do much - it will return the message we wrote to the blockchain via the greeter.sol contract as a proff of concept/hello world. 
 
 ### Initalising Truffle and Webpack
 
 In the first tutorial we made a new directory for our project, opened that directory via the console/terminal and ran
 
-> _>truffle init_
+> >truffle init
 
 this set up a bunch of folders for our truffle project.
 
 In order to extend our project using Truffle's Dapp (distributed application) development fucntionality and build process we need to initialise the project using:
 
 > _>truffle init webpack_
+
+if this command is reject you have a newer verison of truffle and should try;
+
+> truffle unbox webpack
+
+instead.
 
 This initialisation process adds all the dependencies we require in order make use of Truffles web framework - allowing us to build a final Javascript file that includes a number of libraries that make it easier to interact with a deployed contract via a browser. It will also provide tools for easily testing and serving our files locally for testing.
 
@@ -103,9 +114,9 @@ Run the command;
 
 > _> npm run dev_
 
-from the directory and truffle will build and serve a test project at a local address (localhost://8080 or soemthing similar that it will report in the console). You can then open your project at this address. 
+from the directory and truffle will build and serve a test project at a local address (localhost://8080 or something similar that it will report in the console). You can then open your project at this address. 
 
-If your app.js files compiles the npm run dev process running in the console will let you know - if not it will give you errors that can direct you to the problem. The other place to look for errors and test for problems is using the javascript colnsole in you browser's development tools.
+If your app.js files compiles correctly (it has no errors) the _npm run dev_ process running in the console will let you know - if not it will give you errors that can direct you to the problem. The other place to look for errors and test for problems is using the javascript colnsole in you browser's development tools.
 
 ### Building and deploying.
 
@@ -117,7 +128,7 @@ and Truffle will package all the dependencies with our dApp code in the index.ht
 
 ## Tutorial Files.
 
-I have added four files to this repository with the important files (_greeter.html_ and _greeter.js_ heavily commented so that you can follow along with the code in situ. Loading the code from these files into the _index.html_ and _app.js_ files taht reside in your projects _app_  directory. Reading through them is a good way to process and explore the tutorial/example.
+I have added four files to this repository with the important files (_greeter.html_ and _greeter.js_ heavily commented so that you can follow along with the code in situ. Load the code from these files (copy and replace the original code contents) into the _index.html_ and _app.js_ files that reside in your projects _app_  directory. Reading through them is a good way to process and explore the tutorial/example.
 
 - [greeter.html](greeter.html) (this will become your index.html file)
 - [greetr.js](greeter.js) (this will become your app.js file)
