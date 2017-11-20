@@ -7,7 +7,14 @@ The second set of files is for a more complex project puts a web frontend on a g
 2. Navigate to that folder in a command line editor.
 3. With truffle installed type > truffle init webpack. (you may need to install nodejs and truffle before proceeding)
 4. This should create a truffle project structure with many new directories and files created inside you greeter directory.
-5. Open this link (greeter.js)[greeter.js]
+5. Open this link [greeter.js](greeter.js) and copy the RAW code (click RAW, then select all, then copy).
+6. Paste the contents of this file into the file app.js that you have just created and which resides in the app>javascripts> folder of your new truffle project directory.
+7. Open this link [greeter.html](greeter.html) and copy the RAW code (click RAW, then select all, then copy).
+8. Paste the contents of this file into the file index.html that you have just created and which resides in the app> folder of your new truffle project directory.
+9. Run the command 'truffle console
+9. Open this link [greeter.sol](greeter.sol) and copy can paste the contents into a new file. Save the file as greeter.sol to the contracts folder of your truffle project.
+10. Open this link [truffle.js](truffle.js) and paste the contents into the truffle.js file that is in the root of your truffle project.
+11. Open this link [2_deploy_contracts.js](2_deploy_contracts.js) and paste the content into the file 2_deploy_contracts.js that resides in your migrations folder. 
 
 web3.eth.accounts[0]
 
