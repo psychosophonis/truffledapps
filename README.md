@@ -23,7 +23,17 @@ personal.unlockAccount("0x10afa70143dc4f099f729815683727b0f926745", "veryStrongP
 17. Go back to the root of your truffle project within the command line editor. Type > truffle compile.
 18. If you recieve no error try > truffle migrate  (you may need to use truffle migrate --reset of youve tried before)
 19. The command line shoud tell you it is 'Saving successful migration to network...' if all has gone well.
-20. Run
+20. Run the command > npm run dev , which will start a local web server on your computer.
+21. If your javascript compiles ok and has no errors the console will tell you that the file has compiled succesfully and will give ypu the address of a localhost server.
+21. Look for a URL that says localhost:/8080 (or seomthing like it) - copy and paste it into a browser to run your dApp.
+22. The browser should return the message you wrote to the blockchain.
+24. Open the app.js file and the index.html file. 
+25. You may now edit these freely.... try adding somemore infomration from the blockchain by exploring these commands:
+ 
+
+
+
+
 
 
 
