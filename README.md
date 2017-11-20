@@ -28,17 +28,7 @@ personal.unlockAccount("0x10afa70143dc4f099f729815683727b0f926745", "veryStrongP
 21. Look for a URL that says localhost:/8080 (or seomthing like it) - copy and paste it into a browser to run your dApp.
 22. The browser should return the message you wrote to the blockchain.
 24. Open the app.js file and the index.html file. 
-25. You may now edit these freely.... try adding somemore infomration from the blockchain by exploring these commands:
- 
-
-
-
-
-
-
-
-web3.eth.accounts[0]
-
+25. You may now edit these freely.... try adding some more information from the blockchain by exploring these commands: https://github.com/ethereum/wiki/wiki/JavaScript-API
 
 
 ### Directory of files for each project:
