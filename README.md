@@ -11,10 +11,21 @@ The second set of files is for a more complex project puts a web frontend on a g
 6. Paste the contents of this file into the file app.js that you have just created and which resides in the app>javascripts> folder of your new truffle project directory.
 7. Open this link [greeter.html](greeter.html) and copy the RAW code (click RAW, then select all, then copy).
 8. Paste the contents of this file into the file index.html that you have just created and which resides in the app> folder of your new truffle project directory.
-9. Run the command 'truffle console
-9. Open this link [greeter.sol](greeter.sol) and copy can paste the contents into a new file. Save the file as greeter.sol to the contracts folder of your truffle project.
-10. Open this link [truffle.js](truffle.js) and paste the contents into the truffle.js file that is in the root of your truffle project.
-11. Open this link [2_deploy_contracts.js](2_deploy_contracts.js) and paste the content into the file 2_deploy_contracts.js that resides in your migrations folder. 
+9. Run the command 'truffle console' 
+10. At the new console prompt type web3.eth.accounts[0] and copy the wallet address that the command returns. If no number is returned create a new account by typing web3.personal.newAccount('verystrongpassword') (replacing the password with your own)
+11. Open this link [truffle.js](truffle.js) and paste the contents into the truffle.js file that is in the root of your truffle project. Change the 'account from' address to the number of the address you just created and save the file.
+12. Open this link [greeter.sol](greeter.sol) and copy and paste the contents into a new file. Save the file as greeter.sol to the contracts folder of your truffle project.
+13. Open this link [2_deploy_contracts.js](2_deploy_contracts.js) and paste the contents into the file 2_deploy_contracts.js that resides in the >migrations folder of your truffle project.
+14. Change the message that you will write to the contract to something of your own. Save the file.
+15. In the truffle console (type the command > truffle console) unlock your default account by typing;
+personal.unlockAccount("0x10afa70143dc4f099f729815683727b0f926745", "veryStrongPassword") replacing the account address with you own default address that you copied earlier and your own password.
+16. The truffle console should read 'true' if the account is unlocked succesfully.
+17. Go back to the root of your truffle project within the command line editor. Type > truffle compile.
+18. If you recieve no error try > truffle migrate  (you may need to use truffle migrate --reset of youve tried before)
+19. The command line shoud tell you it is 'Saving successful migration to network...' if all has gone well.
+20. Run
+
+
 
 web3.eth.accounts[0]
 
