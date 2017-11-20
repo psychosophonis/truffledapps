@@ -11,14 +11,6 @@ pragma solidity ^0.4.0;
  * each depositor will pay different amounts of gas.
  *
  */
- 
- /* 
- 
- This contract was edited to try and make the event LogRoundOver() return values 
- and to add a call function that would return the amount deposited. There are prabbaly better ways.
- 
- */
- 
 
 contract BouncingWishingWell {
 
@@ -97,7 +89,7 @@ contract BouncingWishingWell {
             depositors[ 3 ].transfer(_amount/5);
             depositors[ 4 ].transfer(_amount/5);
 
-        // LogRoundOver(666); // logic of total won to be worked out
+        //LogRoundOver(amountDeposited,depositorCount,depositors[depositorCount-1]); // logic of total won to be worked out
         //  LogStuff();
 
         }
@@ -105,15 +97,12 @@ contract BouncingWishingWell {
         // Increment the callerCount
         depositorCount ++;
 
+        LogRoundOver(amountDeposited,depositorCount,depositors[depositorCount-1]); // logic of total won to be worked out
+
         return amountDeposited;
-    }
-    
-    function LogStuff() public {
-        
-        LogRoundOver(amountDeposited,depositorCount,depositors[depositorCount-1]);
+
         
     }
-    
 
  function amountDep() constant returns (uint256) {
         return amountDeposited;
