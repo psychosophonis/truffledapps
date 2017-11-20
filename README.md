@@ -3,6 +3,16 @@ This repo includes files for building truffle example projects/tutorials
 The first tutorial is an extension of our 'Greeter' hello world examples linked on our web page.
 The second set of files is for a more complex project puts a web frontend on a gambling contract BouncingWishingWell.sol.
 
+1. Make a new directory for your truffle project - call it greeter.
+2. Navigate to that folder in a command line editor.
+3. With truffle installed type > truffle init webpack. (you may need to install nodejs and truffle before proceeding)
+4. This should create a truffle project structure with many new directories and files created inside you greeter directory.
+5. Open this link (greeter.js)[greeter.js]
+
+web3.eth.accounts[0]
+
+
+
 ### Directory of files for each project:
 
 #### Wishing Well;
