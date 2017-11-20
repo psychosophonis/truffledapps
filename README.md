@@ -15,7 +15,7 @@ The second set of files is for a more complex project puts a web frontend on a g
 #### Greeter;
 
 - [greeter.html](greeter.html) (this will become your index.html file)
-- [greetr.js](greeter.js) (this will become your app.js file)
+- [greeter.js](greeter.js) (this will become your app.js file)
 - [greeter.sol](greeter.sol)
 - [greeter.json](greeter.json)
 
