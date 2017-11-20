@@ -1,4 +1,5 @@
-This repo includes files fro building truffle example projects/tutorials.
+This repo includes files for building truffle example projects/tutorials 
+- much of which we are still discovering and working through.
 The first tutorial is an extension of our 'Greeter' hello world examples linked on our web page.
 The second set of files is for a more complex project puts a web frontend on a gambling contract BouncingWishingWell.sol.
 
@@ -18,8 +19,6 @@ The second set of files is for a more complex project puts a web frontend on a g
 - [greeter.js](greeter.js) (this will become your app.js file)
 - [greeter.sol](greeter.sol)
 - [greeter.json](greeter.json)
-
-
 
 ## Greeter with a Javascript/HTML front end.
 
@@ -72,11 +71,11 @@ These files include all the information that we struggled to wrangle in our firs
 
 The process of developing a frontend with Truffle with which to interact with our Ethereum contracts involves editing the _index.html_ and _app.js_ files in the apps directory. 
 
-We then run the command;
+Run the command;
 
 > _> npm run dev_
 
-From the directory and truffle will build and serve a test project at a local address (localhost://8080 or soemthing similar that it will report in the console). You can then open your project at this address. 
+from the directory and truffle will build and serve a test project at a local address (localhost://8080 or soemthing similar that it will report in the console). You can then open your project at this address. 
 
 If your app.js files compiles the npm run dev process running in the console will let you know - if not it will give you errors that can direct you to the problem. The other place to look for errors and test for problems is using the javascript colnsole in you browser's development tools.
 
