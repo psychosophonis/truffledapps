@@ -1,20 +1,20 @@
 ## Deploying and Interacting with a none-too smart contract.
 
-This repo includes files for building truffle example projects/tutorials 
-- much of which we are still discovering and working through.
+This repo includes files for building truffle example projects/tutorials (much of which we are still discovering and working through.)
+
 The first tutorial is an extension of our 'Greeter' hello world examples linked on our web page.
 The second set of files is for a more complex project puts a web frontend on a gambling contract BouncingWishingWell.sol.
 
-The tutorial detail below the numbered steps adds more explanation but leaves out many steps already performed in our first tutorial.... if you skip a step you will not succeed. You must have changed or copied across index.html, app.js, truffle.js, greeter.sol, 2_deploy_contracts.js, unlocked your account, and truffle migrate your contract to the rinkeby network for any of this to work.
+The tutorial details below the numbered steps adds more explanation but leaves out many steps already performed in our first tutorial.... if you skip a step you will not succeed. You must have changed or copied across index.html, app.js, truffle.js, greeter.sol, 2_deploy_contracts.js, unlocked your account, and truffle migrate your contract to the rinkeby network for any of this to work.
 
-The numbered steps try to repeat all necessary steps to migrate and interact with the greeter project.
+The numbered steps try to repeat _all_ necessary steps to migrate and interact with the greeter project.
 If I have left anyhting out let me know.
 
 1. Run and sync a local geth node on the rinkeby network;
 
 geth --networkid=4 --datadir=$HOME/.rinkeby --cache=1024 --bootnodes=enode://a24ac7c5484ef4ed0c5eb2d36620ba4e4aa13b8c84684e1b4aab0cebea2ae45cb4d375b77eab56516d34bfbd3c1a833fc51296ff084b770b94fb9028c4d25ccf@52.169.42.101:30303 --rpc --rpcapi db,eth,net,web3,personal --rpcport 8545 --rpcaddr 127.0.0.1 --rpccorsdomain "*"
 
-2. Make a new directory for your truffle project - call it greeter.
+2. Make a new directory for your truffle project - call it greeter. (if you already have a greeter folder you can call it something else)
 3. Navigate to that folder in a command line editor.
 4. With truffle installed type > truffle init webpack. (you may need to install nodejs and truffle before proceeding) (see more detail below)
 5. This should create a truffle project structure with many new directories and files created inside you greeter directory.
